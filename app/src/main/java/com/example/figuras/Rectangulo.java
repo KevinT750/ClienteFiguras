@@ -44,6 +44,16 @@ public class Rectangulo extends AppCompatActivity {
         txtLado1 = findViewById(R.id.txtLado1);
         txtLado2 = findViewById(R.id.txtLado2);
         txtResultado = findViewById(R.id.btnRespuesta);
+        txtLado1.setOnClickListener(
+                v -> {
+                    txtLado1.getText().clear();
+                }
+        );
+        txtLado2.setOnClickListener(
+                v -> {
+                    txtLado2.getText().clear();
+                }
+        );
 
     }
 

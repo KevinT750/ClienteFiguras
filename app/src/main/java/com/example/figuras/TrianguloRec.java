@@ -44,6 +44,16 @@ public class TrianguloRec extends AppCompatActivity {
         txtLado1 = findViewById(R.id.txtAltura);
         txtLado2 = findViewById(R.id.txtBase);
         txtResultado = findViewById(R.id.btnRespuesta);
+        txtLado1.setOnClickListener(
+                v -> {
+                    txtLado1.getText().clear();
+                }
+        );
+        txtLado2.setOnClickListener(
+                v -> {
+                    txtLado2.getText().clear();
+                }
+        );
 
     }
 
@@ -74,7 +84,7 @@ public class TrianguloRec extends AppCompatActivity {
                             String perimetro = jsonResponse.getString("Perimetro");
 
                             String resultado = "Figura: " + figura + "\n" +
-                                    "Hipotenusa" + hipotenusa + "\n" +
+                                    "Hipotenusa: " + hipotenusa + "\n" +
                                     "Área: " + area + "\n" +
                                     "Perímetro: " + perimetro;
 

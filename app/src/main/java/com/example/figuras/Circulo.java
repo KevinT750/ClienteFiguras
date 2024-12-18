@@ -44,6 +44,11 @@ public class Circulo extends AppCompatActivity {
         btnEnviar.setOnClickListener(v -> calcularAreaPerimetro());
         txtDiametro = findViewById(R.id.txtDiametro);
         txtResultado = findViewById(R.id.btnRespuesta);
+        txtDiametro.setOnClickListener(
+                v -> {
+                    txtDiametro.getText().clear();
+                }
+        );
 
     }
     private void calcularAreaPerimetro() {
